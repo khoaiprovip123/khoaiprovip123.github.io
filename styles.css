@@ -142,10 +142,10 @@ body[data-active-scene="meeting"] .ambient-scene-light{background:radial-gradien
 .project-foot-cards article,
 .repo-list a,
 .stack-list span{
-  transition:transform .38s cubic-bezier(.2,.8,.2,1),box-shadow .38s ease,background .38s ease,border-color .38s ease;
+  transition:translate .38s cubic-bezier(.2,.8,.2,1),box-shadow .38s ease,background .38s ease,border-color .38s ease;
 }
 .project-foot-cards article:hover{
-  transform:translateY(-7px);
+  translate:0 -7px;
   box-shadow:0 26px 64px rgba(74,96,142,.11);
   border-color:rgba(255,255,255,.9);
 }
@@ -203,3 +203,5 @@ body[data-active-scene="meeting"] .ambient-scene-light{background:radial-gradien
 @media (max-width:760px){.halo,.orbit{filter:none}}
 .adb-console.adb-shot{display:block;padding:0;background:none;border:0;box-shadow:none;overflow:visible}.adb-shot img{display:block;width:100%;height:auto;border-radius:22px;box-shadow:0 30px 80px -20px rgba(40,70,160,.35),0 0 0 1px rgba(255,255,255,.6)}
 .adb-shot{perspective:1400px}.adb-shot img{will-change:transform;backface-visibility:hidden}
+
+.adb-console.adb-shot{min-height:0;height:auto;align-self:center;padding:0}.project-scene .project-foot-cards{margin-top:clamp(24px,4vw,56px);position:relative;z-index:6}

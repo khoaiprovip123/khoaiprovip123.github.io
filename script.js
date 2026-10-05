@@ -235,10 +235,6 @@ if(!reduced && window.gsap && window.ScrollTrigger){
     const end=+m[1], o={v:0};
     gsap.to(o,{v:end,duration:1.6,ease:'power2.out',delay:1,onUpdate:()=>b.textContent=Math.round(o.v)+m[2]});
   });
-  // Foot cards of each project drift at different speeds.
-  document.querySelectorAll('.project-foot-cards').forEach(el=>{
-    gsap.fromTo(el,{y:30},{y:-30,ease:'none',scrollTrigger:{trigger:el,start:'top bottom',end:'bottom top',scrub:1}});
-  });
   // Section kickers slide in; repo list rows shift on hover-free scroll.
   gsap.utils.toArray('.repo-list a').forEach((a,i)=>{
     gsap.fromTo(a,{xPercent:i%2?4:-4},{xPercent:0,ease:'none',scrollTrigger:{trigger:a,start:'top 95%',end:'top 60%',scrub:1}});

@@ -184,7 +184,7 @@ if(!reduced && window.gsap && window.ScrollTrigger){
 
     const footCards = scene.querySelectorAll('.project-foot-cards article');
     if(footCards.length){
-      gsap.from(footCards,{opacity:0,y:34,scale:.96,stagger:.09,duration:.72,ease:'power3.out',scrollTrigger:{trigger:footCards[0].parentElement,start:'top 84%'}});
+      gsap.from(footCards,{opacity:0,y:26,stagger:.08,duration:.6,ease:'power3.out',clearProps:'transform',scrollTrigger:{trigger:footCards[0].parentElement,start:'top 88%'}});
     }
   });
 

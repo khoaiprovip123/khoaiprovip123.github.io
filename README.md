@@ -1,39 +1,34 @@
-# VK — Digital Atelier (Bilingual)
+# Văn Khoai — Portfolio Cinematic / Final Candidate (2026-11-04)
 
-Bright, modern, bilingual personal portfolio for **Van Khoai / @khoaiprovip123**.
+Website cá nhân hoàn thiện dựa trên concept Trục Sáng Tạo, không dùng framework hoặc bước build.
 
-## Features
-- Vietnamese / English language switch with localStorage persistence.
-- Bright editorial design with distinct art direction per project.
-- Smooth scrolling via Lenis and scroll-linked motion via GSAP ScrollTrigger.
-- Per-project transitions: phone fan, desktop console perspective, document fragments, audio waveform / transcript scene.
-- Responsive and `prefers-reduced-motion` aware.
-- GitHub Pages ready; no build step required.
+## Nội dung
+1. Giới thiệu cá nhân và 3D trục xoắn điều khiển theo vị trí cuộn.
+2. Kỹ thuật phần mềm, trải nghiệm sản phẩm, AI và tự động hóa.
+3. FinLux và KT ADB Tool dùng ảnh giao diện thực tế (ảnh do chủ sở hữu cung cấp).
+4. Smart Document Assistant và AI Meeting Assistant với minh họa được ghi rõ.
+5. Sáu repository khác, tất cả liên kết public đã đối chiếu với GitHub.
+6. Cách làm việc, liên hệ Email / GitHub và footer.
 
-## Featured projects
-- FinLux
-- KT ADB Tool Pro
-- Smart Document Assistant
-- AI Meeting Assistant
+## Hiệu ứng
+- Một lớp sky ngày/đêm cố định chạy xuyên suốt toàn trang, được điều khiển bằng normalized scroll tiến độ.
+- 3D xoắn dựa trên Canvas, mảng polygon xếp theo chiều sâu, hạt sao và ánh sáng chạy quanh trục.
+- Chuyển cảnh nội dung có cross-fade không tạo khoảng rỗng.
+- Có chế độ giảm chuyển động; ảnh dự án zoom trong lightbox, hỗ trợ Escape.
+- Trên màn hình nhỏ: layout 1 cột và ảnh thật không bị cắt.
 
-## Run locally
-```bash
+## Chạy
+Mở trực tiếp `index.html` bằng Chrome/Edge, hoặc từ thư mục project:
+
+```sh
 python -m http.server 8080
 ```
-Open `http://localhost:8080`.
 
-## Deploy to GitHub Pages
-Upload the files to the root of a public repository, then enable GitHub Pages from the repository settings.
+Mở `http://localhost:8080`. Không có dependencies cần cài. Font online có fallback tiếng Việt.
 
-## Transition Edition
+## Triển khai
+Thư mục root của GitHub Pages dùng index.html, css/style.css, js/main.js và assets/*.webp.
+Giữ nhánh `main` làm bản production, merge Pull Request sau khi đã xem thử.
 
-Bản này giữ nguyên layout và nội dung của **VK Digital Atelier — Bilingual** và chỉ tăng cường motion/transition:
-
-- Hero reveal có depth + blur nhẹ.
-- Chuyển cảnh giữa các project theo 4 phong cách khác nhau: warm light, technical lens, page-light, aurora wave.
-- Ambient light đổi màu theo project đang xem.
-- Project title dùng clip reveal, visual dùng blur-to-focus + parallax.
-- Scene index line, feature cards, repo list, About và Contact đều có motion riêng.
-- Active navigation tự cập nhật theo section.
-- Chuyển ngôn ngữ VI/EN dùng View Transition API khi trình duyệt hỗ trợ.
-- Giữ `prefers-reduced-motion` để giảm animation khi người dùng yêu cầu.
+## Ghi chú
+Đừng xem hai minh họa cho Smart Document/AI Meeting như screenshot thật. Những hình ảnh dự án ở `assets/` là ảnh sản phẩm đã cung cấp và có thể thay khi cập nhật UI.

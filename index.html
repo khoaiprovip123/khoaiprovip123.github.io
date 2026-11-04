@@ -1,260 +1,158 @@
 <!DOCTYPE html>
+
 <html lang="vi">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#f6f9ff" />
-  <meta name="description" content="Van Khoai — Digital Atelier. AI, automation and product engineering portfolio." />
-  <link rel="canonical" href="https://khoaiprovip123.github.io/" />
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%230b1220'/%3E%3Ctext x='32' y='42' font-size='28' font-family='Georgia,serif' font-weight='700' text-anchor='middle' fill='%23fff'%3EVK%3C/text%3E%3C/svg%3E" />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://khoaiprovip123.github.io/" />
-  <meta property="og:title" content="Van Khoai — Digital Atelier" />
-  <meta property="og:description" content="AI · Automation · Software · Experiments" />
-  <meta property="og:image" content="https://avatars.githubusercontent.com/u/90585497?v=4" />
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Van Khoai — Digital Atelier" />
-  <meta name="twitter:description" content="AI · Automation · Software · Experiments" />
-  <title>Van Khoai — Digital Atelier</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css" />
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1,viewport-fit=cover" name="viewport"/>
+<meta content="#060a13" name="theme-color"/>
+<meta content="Văn Khoai — phát triển phần mềm, thiết kế trải nghiệm, kiến trúc hệ thống, AI và tự động hóa. Khám phá những sản phẩm được xây dựng từ bài toán thực tế." name="description"/>
+<meta content="website" property="og:type"/>
+<meta content="Văn Khoai — Phần mềm, AI và trải nghiệm" property="og:title"/>
+<meta content="Thiết kế, phát triển phần mềm và AI từ vấn đề thực tế. Khám phá FinLux, KT ADB Tool và những dự án mã nguồn mở." property="og:description"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700;800&amp;family=Noto+Serif:ital,wght@0,400;0,500;1,400;1,500&amp;display=swap" rel="stylesheet"/>
+<link href="css/style.css" rel="stylesheet"/>
+<title>Văn Khoai — Kiến trúc, phần mềm và trải nghiệm</title>
 </head>
 <body>
-  <a class="skip-link" href="#projects">Skip to content</a>
-  <div class="page-progress" aria-hidden="true"><span></span></div>
-  <div class="cursor-light" aria-hidden="true"></div>
-  <div class="grain" aria-hidden="true"></div>
+<div aria-hidden="true" class="page-atmosphere">
+  <div class="page-night-layer"></div>
+  <div class="page-dawn-layer"></div>
+  <div class="page-day-layer"></div>
+  <div class="page-star-layer"></div>
+  <div class="page-glow-layer"></div>
+</div>
+<a class="skip-link" href="#work">Bỏ qua hiệu ứng, đến dự án</a>
+<div aria-hidden="true" class="top-line"><div id="siteProgress"></div></div>
+<div aria-hidden="true" class="site-cursor" id="cursor"><span></span></div>
+<header class="header" id="header">
+<a aria-label="Văn Khoai — về đầu trang" class="brand" href="#beginning">
+<span class="brand-glyph">K<span class="brand-dot">.</span></span>
+<span class="brand-copy"><b>VĂN KHOAI</b><small>PHẦN MỀM · TRẢI NGHIỆM</small></span>
+</a>
+<nav aria-label="Điều hướng chính" class="nav-links">
+<a href="#beginning">GIỚI THIỆU</a>
+<a href="#work">SẢN PHẨM</a>
+<a href="#repos">KHO MÃ NGUỒN</a>
+</nav>
+<div class="header-end">
+<span class="local-time" id="headerClock">DẤU ẤN CÁ NHÂN / 2026</span>
+<a class="nav-contact" href="#contact">LIÊN HỆ <span aria-hidden="true">↗</span></a>
+<button aria-controls="mobileNav" aria-expanded="false" aria-label="Mở menu" class="mobile-nav-toggle" id="menuToggle"><i></i><i></i></button>
+</div>
+<nav aria-label="Menu trên điện thoại" class="mobile-nav" hidden="" id="mobileNav">
+<a href="#beginning">Giới thiệu</a><a href="#work">Sản phẩm</a><a href="#repos">Kho mã nguồn</a><a href="#contact">Liên hệ</a>
+</nav>
+</header>
+<main>
+<section aria-label="Giới thiệu Văn Khoai qua trải nghiệm cuộn 3D tương tác" class="journey" id="beginning">
+<div class="journey-sticky" id="sceneViewport">
+<div class="cosmos-base"></div>
+<div class="cosmos-dawn" id="dawnLayer"></div>
+<div class="cosmos-daybreak" id="dayLayer"></div>
+<div class="cosmos-haze haze-cold"></div>
+<div class="cosmos-haze haze-warm" id="warmHaze"></div>
+<div aria-hidden="true" class="horizon-back" id="horizonBack"></div>
+<div aria-hidden="true" class="sun-halo" id="sunHalo"><div class="sun-disk"></div></div>
+<canvas aria-label="Bầu trời sao và cấu trúc xoắn ba chiều chuyển động theo cuộn trang" class="universe-canvas" id="universeCanvas"></canvas>
+<div aria-hidden="true" class="grain"></div>
+<div aria-hidden="true" class="scene-grid"></div>
+<div aria-hidden="true" class="edge-left"></div>
+<div class="scene-headline scene-zero" data-scene="0">
+<div class="scene-eyebrow"><span class="line-orn"></span><span>VĂN KHOAI / KỸ THUẬT &amp; SẢN PHẨM</span></div>
+<h1 class="hero-name">VĂN KHOAI<span class="hero-dot">.</span></h1>
+<p class="hero-statement">Công nghệ có chiều sâu.<br/><em>Trải nghiệm có chủ đích.</em></p>
+<p>Tôi phát triển phần mềm và ứng dụng AI để giải quyết những bài toán thực tế — từ kiến trúc đến trải nghiệm sử dụng.</p>
+<div class="scene-actions"><a class="round-action" href="#work"><span>XEM SẢN PHẨM</span><i aria-hidden="true">↗</i></a><span class="scene-action-note">CUỘN ĐỂ KHÁM PHÁ</span></div>
+</div>
+<div class="scene-headline scene-one" data-scene="1">
+<div class="scene-eyebrow"><span class="line-orn"></span><span>01 / TRỤC SÁNG TẠO</span></div>
+<p class="mini-quote">VỮNG TỪ NỀN TẢNG.</p>
+<h2>Vững từ<br/><em>cốt lõi.</em></h2>
+<p>Kiến trúc rõ ràng. Dữ liệu nhất quán. Hệ thống sẵn sàng mở rộng.</p>
+</div>
+<div class="scene-headline scene-two" data-scene="2">
+<div class="scene-eyebrow"><span class="line-orn"></span><span>02 / TRẢI NGHIỆM SẢN PHẨM</span></div>
+<p class="mini-quote">ĐẸP PHẢI ĐI CÙNG DỄ DÙNG.</p>
+<h2>Rõ từng<br/><em>tương tác.</em></h2>
+<p>Mỗi thao tác đều có lý do. Mỗi chi tiết đều phục vụ người dùng.</p>
+</div>
+<div class="scene-headline scene-three" data-scene="3">
+<div class="scene-eyebrow"><span class="line-orn"></span><span>03 / AI VÀ TỰ ĐỘNG HÓA</span></div>
+<h2>AI để<br/><em>làm thật.</em></h2>
+<p>Kết nối dữ liệu, tự động hóa việc lặp lại và giữ con người ở vị trí kiểm soát.</p>
+</div>
+<div class="scene-headline scene-four" data-scene="4">
+<div class="scene-eyebrow"><span class="line-orn"></span><span>04 / SẢN PHẨM TIÊU BIỂU</span></div>
+<h2>Để sản phẩm<br/><em>lên tiếng.</em></h2>
+<p>Mỗi dự án là một giải pháp có thể khám phá, kiểm chứng và tiếp tục hoàn thiện.</p>
+<a class="underline-link" href="#work">KHÁM PHÁ DỰ ÁN <span aria-hidden="true">↗</span></a>
+</div>
+<div aria-hidden="true" class="scene-top-index"><span id="chapterNum">00</span><span class="index-line"></span><span>04</span></div>
+<div aria-label="Tiến độ các chương" class="scene-side-rail">
+<div class="rail-name">NĂNG LỰC / SẢN PHẨM</div>
+<div class="rail-progress"><span id="railProgress"></span></div>
+<div class="rail-count"><span id="sideCount">00</span><span>/04</span></div>
+</div>
+<div class="scene-bottom">
+<span class="scene-coordinate">VĂN KHOAI <span class="bottom-divider">—</span> TRANG CÁ NHÂN</span>
+<div class="scroll-notice"><span class="scroll-mouse"><i></i></span><span>CUỘN ĐỂ KHÁM PHÁ</span></div>
+<button aria-pressed="false" class="motion-button" id="motionToggle" type="button"><span class="motion-bullet"></span> CHUYỂN ĐỘNG: BẬT</button>
+</div>
+<div aria-hidden="true" class="scene-timer"><span id="scenePercent">000</span><small>% ĐÃ KHÁM PHÁ</small></div>
+</div>
+</section>
+<section class="work-section" id="work">
+<div class="work-intro reveal">
+<div class="section-meta"><span>DỰ ÁN TIÊU BIỂU</span><span>02 / DỰ ÁN CÓ ẢNH THỰC TẾ</span></div>
+<div class="work-intro-layout"><h2>Không chỉ đẹp.<br/><em>Phải hữu ích.</em></h2><div class="work-aside"><span class="tiny-sun"></span><p>Mỗi sản phẩm bắt đầu từ một vấn đề cụ thể. Giao diện chỉ thực sự tốt khi công việc trở nên dễ hơn.</p></div></div>
+</div>
+<article class="project project-finlux" id="finlux">
+<div class="project-ambient"></div>
+<div class="project-inner">
+<div class="project-head reveal"><span>01 / TÀI CHÍNH CÁ NHÂN</span><span>ANDROID / WEB</span></div>
+<div class="project-text reveal"><div class="project-pre">THẤU HIỂU DÒNG TIỀN</div><h3>Fin<span>Lux.</span></h3><p>Thu chi, ngân sách và báo cáo trong một trải nghiệm gọn gàng. Mỗi con số đều cần dễ hiểu.</p><div class="project-tags"><span>Kotlin</span><span>Jetpack Compose</span><span>Firebase</span></div><div class="project-links"><a href="https://github.com/khoaiprovip123/FinLux" rel="noopener noreferrer" target="_blank">XEM MÃ NGUỒN <span aria-hidden="true">↗</span></a><button class="preview-open" data-src="assets/finlux-real.webp" data-title="FinLux — ảnh chụp giao diện thật" type="button">XEM ẢNH GIAO DIỆN <span aria-hidden="true">↗</span></button></div></div>
+<button aria-label="Phóng to ảnh giao diện thật của FinLux" class="project-image-container js-tilt reveal" data-src="assets/finlux-real.webp" data-title="FinLux — ảnh chụp giao diện thật" type="button"><img alt="Ảnh chụp giao diện FinLux thực tế" width="1920" height="875" loading="lazy" decoding="async" src="assets/finlux-real.webp"/><span class="project-image-caption"><span>ẢNH GIAO DIỆN THỰC TẾ</span><span>PHÓNG TO ↗</span></span></button>
+</div>
+<span aria-hidden="true" class="project-watermark">FINLUX</span>
+</article>
+<article class="project project-adb" id="adb">
+<div class="project-ambient"></div>
+<div class="project-inner">
+<div class="project-head reveal"><span>02 / CÔNG CỤ KỸ THUẬT</span><span>MÁY TÍNH / ANDROID</span></div>
+<div class="project-text reveal"><div class="project-pre">KIỂM SOÁT TRONG TẦM TAY</div><h3>KT ADB<span> Tool.</span></h3><p>Quản lý Android qua ADB/Fastboot, tối ưu thiết bị và đặt an toàn lên trước mọi thao tác.</p><div class="project-tags"><span>Electron</span><span>ADB / Fastboot</span><span>An toàn thiết bị</span></div><div class="project-links"><a href="https://github.com/khoaiprovip123/KT_ADB_Tool" rel="noopener noreferrer" target="_blank">XEM MÃ NGUỒN <span aria-hidden="true">↗</span></a><button class="preview-open" data-src="assets/kt-adb-real.webp" data-title="KT ADB Tool — ảnh chụp giao diện thật" type="button">XEM ẢNH GIAO DIỆN <span aria-hidden="true">↗</span></button></div></div>
+<button aria-label="Phóng to ảnh giao diện thật của KT ADB Tool" class="project-image-container js-tilt reveal" data-src="assets/kt-adb-real.webp" data-title="KT ADB Tool — ảnh chụp giao diện thật" type="button"><img alt="Ảnh chụp giao diện KT ADB Tool thực tế" width="1920" height="1033" loading="lazy" decoding="async" src="assets/kt-adb-real.webp"/><span class="project-image-caption"><span>ẢNH GIAO DIỆN THỰC TẾ</span><span>PHÓNG TO ↗</span></span></button>
+</div>
+<span aria-hidden="true" class="project-watermark">KT ADB</span>
+</article>
+</section>
+<section class="research-section" id="research">
+<div class="section-meta reveal"><span>THỬ NGHIỆM / PHÁT TRIỂN</span><span>KHÔNG NGỪNG HOÀN THIỆN</span></div>
+<div class="research-heading reveal"><span class="section-count">03 / 05</span><h2>Công cụ gọn.<br/><em>Giải quyết thật.</em></h2><p>Bên cạnh sản phẩm lớn, tôi còn xây các công cụ nhỏ để giảm thao tác thừa và tăng tốc công việc hằng ngày.</p></div>
+<div class="research-grid">
+<a class="research-card doc-card reveal" href="https://github.com/khoaiprovip123/Smart-document-assistant" rel="noopener noreferrer" target="_blank"><div class="research-card-top"><span>TRỢ LÝ TÀI LIỆU</span><span>↗</span></div><div aria-hidden="true" class="doc-illustration"><div class="doc-leaf l1"><div class="doc-bars"><i></i><i></i><i></i><i></i></div></div><div class="doc-leaf l2"><div class="doc-bars"><i></i><i></i><i></i><i></i></div><span class="doc-stamp">SỬA AN TOÀN</span></div><div class="doc-orbit"></div></div><div class="research-caption">HÌNH MINH HỌA · KHÔNG PHẢI ẢNH ỨNG DỤNG</div><h3>Smart Document<br/>Assistant</h3><p>Kiểm tra thể thức · Đánh giá tài liệu · Sửa lỗi có kiểm soát</p></a>
+<a class="research-card meet-card reveal" href="https://github.com/khoaiprovip123/AIMeeting" rel="noopener noreferrer" target="_blank"><div class="research-card-top"><span>TRỢ LÝ CUỘC HỌP</span><span>↗</span></div><div aria-hidden="true" class="wave-illustration"><div class="wave-lines"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="wave-track"><span>GỠ BĂNG</span><span>QUYẾT ĐỊNH</span><span>CÔNG VIỆC</span></div></div><div class="research-caption">HÌNH MINH HỌA · KHÔNG PHẢI ẢNH ỨNG DỤNG</div><h3>AI Meeting<br/>Assistant</h3><p>Gỡ băng · Phân biệt người nói · Quyết định &amp; công việc</p></a>
+</div>
+</section>
 
-  <header class="site-header">
-    <a class="brand" href="#home" aria-label="Van Khoai home">
-      <span class="brand-mark">VK</span><span class="brand-dot">•</span><span class="brand-sub">DIGITAL ATELIER</span>
-    </a>
-    <nav class="main-nav" aria-label="Primary">
-      <a href="#home" data-i18n="nav_home">Trang chủ</a>
-      <a href="#projects" data-i18n="nav_projects">Dự án</a>
-      <a href="#about" data-i18n="nav_about">Giới thiệu</a>
-      <a href="#contact" data-i18n="nav_contact">Liên hệ</a>
-    </nav>
-    <div class="header-actions">
-      <button class="lang-toggle" id="langToggle" type="button" aria-label="Switch language" aria-pressed="false"><span class="active">VI</span><span>/</span><span>EN</span></button>
-      <a class="github-pill magnetic" href="https://github.com/khoaiprovip123" target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 .7a11.5 11.5 0 0 0-3.64 22.41c.58.11.79-.25.79-.56v-2.02c-3.22.7-3.9-1.36-3.9-1.36-.52-1.34-1.28-1.7-1.28-1.7-1.05-.72.08-.71.08-.71 1.16.08 1.77 1.2 1.77 1.2 1.03 1.78 2.7 1.27 3.36.97.1-.75.4-1.27.73-1.56-2.57-.3-5.27-1.3-5.27-5.75 0-1.27.45-2.3 1.19-3.12-.12-.3-.52-1.48.11-3.08 0 0 .97-.31 3.16 1.19A10.86 10.86 0 0 1 12 6.22c.98 0 1.96.13 2.88.38 2.19-1.5 3.16-1.19 3.16-1.19.63 1.6.23 2.78.11 3.08.74.82 1.19 1.85 1.19 3.12 0 4.46-2.71 5.45-5.29 5.74.42.36.78 1.07.78 2.16v3.03c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .7Z"/></svg>
-        GitHub
-      </a>
-    </div>
-  </header>
-
-  <main>
-    <!-- HERO -->
-    <section id="home" class="scene hero-scene" data-scene="hero">
-      <div class="hero-bg" aria-hidden="true">
-        <div class="halo halo-a"></div><div class="halo halo-b"></div><div class="halo halo-c"></div>
-        <div class="orbit orbit-a"></div><div class="orbit orbit-b"></div>
-        <div class="planet planet-main"><img class="planet-img" src="assets/hero-ai-sphere-square.png" alt="Hệ sinh thái AI holographic" width="992" height="992" decoding="async" /></div>
-        <span class="orbit-label label-ai"><i class="hud-dot"></i>AI Agents</span>
-        <span class="orbit-label label-mobile"><i class="hud-dot"></i>Mobile Native</span>
-        <span class="orbit-label label-doc"><i class="hud-dot"></i>Doc Intelligence</span>
-        <span class="orbit-label label-product"><i class="hud-dot"></i>Product Engineering</span>
-        <span class="orbit-label label-data"><i class="hud-dot"></i>Data &amp; AI</span>
-      </div>
-
-      <div class="hero-copy reveal-group">
-        <p class="eyebrow">AI · AUTOMATION · SOFTWARE · EXPERIMENTS</p>
-        <h1><span>VAN</span><span>KHOAI</span></h1>
-        <h2 data-i18n="hero_title">Tôi thiết kế &amp; xây dựng sản phẩm số.</h2>
-        <p class="hero-lead" data-i18n="hero_lead">Biến vấn đề thực tế thành phần mềm hữu ích bằng AI, tự động hóa và công nghệ hiện đại.</p>
-        <div class="hero-actions">
-          <a href="#projects" class="text-link magnetic"><span class="round-plus">+</span><span data-i18n="hero_cta">Khám phá dự án</span><span class="round-arrow">→</span></a>
-        </div>
-      </div>
-
-      <div class="scroll-cue" aria-hidden="true"><span data-i18n="scroll">CUỘN</span><i></i></div>
-
-      <div class="hero-stats glass-strip">
-        <div><b>15+</b><span data-i18n="stat_projects">Dự án</span></div>
-        <div><b>10+</b><span data-i18n="stat_tech">Công nghệ</span></div>
-        <div><b>∞</b><span data-i18n="stat_ideas">Ý tưởng</span></div>
-        <p data-i18n="hero_note">Không gian cá nhân để xây dựng, thử nghiệm và chia sẻ những thứ thực sự hữu ích.</p>
-      </div>
-    </section>
-
-    <!-- PROJECTS INTRO -->
-    <section id="projects" class="projects-intro section-shell">
-      <div class="section-kicker"><span>01</span><span>SELECTED WORK</span></div>
-      <div class="projects-title-wrap">
-        <h2 class="display-title" data-i18n="projects_title">Mỗi dự án là một thế giới riêng.</h2>
-        <p data-i18n="projects_lead">Không dùng một mẫu lặp lại cho mọi sản phẩm. Mỗi phần có màu sắc, nhịp chuyển động và ngôn ngữ hình ảnh riêng — nhưng vẫn thuộc cùng một hệ thiết kế.</p>
-      </div>
-    </section>
-
-    <!-- FINLUX -->
-    <section class="scene project-scene finlux-scene" data-scene="finlux">
-      <div class="scene-light finlux-light"></div>
-      <div class="scene-index"><span>01</span><b>04</b><i></i></div>
-      <div class="scene-meta">Android&nbsp;&nbsp;•&nbsp;&nbsp;<span data-i18n="finance">Tài chính cá nhân</span></div>
-      <div class="project-copy">
-        <span class="feature-badge">FEATURED PROJECT</span>
-        <h2>FinLux</h2>
-        <h3 data-i18n="finlux_title">Trải nghiệm tài chính cá nhân rõ ràng và dễ kiểm soát.</h3>
-        <p data-i18n="finlux_desc">Ứng dụng Android Native mã nguồn mở để quản lý thu chi, ví, ngân sách và báo cáo với ngôn ngữ Liquid Glass hiện đại.</p>
-        <div class="stack-list"><span>Kotlin</span><span>Jetpack Compose</span><span>Firebase</span><span>Clean Architecture</span></div>
-        <a class="project-cta magnetic" href="https://github.com/khoaiprovip123/FinLux" target="_blank" rel="noopener">GitHub <span>↗</span></a>
-      </div>
-      <div class="finlux-world project-visual">
-        <div class="sun-glow"></div>
-        <div class="liquid-orb orb-gold-1"></div><div class="liquid-orb orb-gold-2"></div>
-        <div class="mountains"></div>
-        <div class="phone-stack" aria-label="FinLux screenshots">
-          <figure class="phone phone-left"><img src="assets/finlux-qa-budget.png" alt="FinLux budget" loading="lazy" decoding="async" /></figure>
-          <figure class="phone phone-main"><img src="assets/finlux-qa-home.png" alt="FinLux dashboard" loading="lazy" decoding="async" /></figure>
-          <figure class="phone phone-right"><img src="assets/finlux-qa-reports.png" alt="FinLux report" loading="lazy" decoding="async" /></figure>
-        </div>
-      </div>
-      <div class="project-foot-cards">
-        <article><b data-i18n="finlux_f1_t">Beautiful UI</b><span data-i18n="finlux_f1_d">Material 3 + Liquid Glass</span></article>
-        <article><b data-i18n="finlux_f2_t">Clear Insights</b><span data-i18n="finlux_f2_d">Ngân sách, biểu đồ, xu hướng</span></article>
-        <article><b data-i18n="finlux_f3_t">Data Ownership</b><span data-i18n="finlux_f3_d">Offline-first &amp; Firebase sync</span></article>
-      </div>
-    </section>
-
-    <!-- KT ADB -->
-    <section class="scene project-scene adb-scene" data-scene="adb">
-      <div class="scene-light adb-light"></div>
-      <div class="scene-index"><span>02</span><b>04</b><i></i></div>
-      <div class="scene-meta">Desktop&nbsp;&nbsp;•&nbsp;&nbsp;Android Tooling</div>
-      <div class="project-copy">
-        <span class="feature-badge blue">ENGINEERING TOOL</span>
-        <h2>KT ADB Tool Pro</h2>
-        <h3 data-i18n="adb_title">Kiểm soát Android mạnh mẽ, nhưng an toàn là nguyên tắc đầu tiên.</h3>
-        <p data-i18n="adb_desc">Bộ công cụ Electron cho ADB/Fastboot với quản lý thiết bị, debloat, tối ưu, screen capture và Safety Shield nhiều lớp.</p>
-        <div class="stack-list"><span>Electron</span><span>React</span><span>TypeScript</span><span>ADB / Fastboot</span></div>
-        <a class="project-cta magnetic" href="https://github.com/khoaiprovip123/KT_ADB_Tool" target="_blank" rel="noopener">GitHub <span>↗</span></a>
-      </div>
-      <div class="adb-console adb-shot project-visual">
-        <img src="assets/kt-adb-ui.png" alt="KT ADB Tool Pro — giao diện Tổng quan thiết bị" width="1024" height="639" loading="lazy" decoding="async" />
-        <div class="adb-rings"><span></span><span></span><span></span></div>
-      </div>
-      <div class="project-foot-cards">
-        <article><b data-i18n="adb_f1_t">Device Control</b><span data-i18n="adb_f1_d">ADB, Fastboot, Wireless</span></article>
-        <article><b data-i18n="adb_f2_t">Safety by Design</b><span data-i18n="adb_f2_d">Chặn thao tác nguy hiểm</span></article>
-        <article><b data-i18n="adb_f3_t">Recovery Ready</b><span data-i18n="adb_f3_d">Rollback và phục hồi nhanh</span></article>
-      </div>
-    </section>
-
-    <!-- SMART DOC -->
-    <section class="scene project-scene doc-scene" data-scene="doc">
-      <div class="scene-light doc-light"></div>
-      <div class="scene-index"><span>03</span><b>04</b><i></i></div>
-      <div class="scene-meta">Office&nbsp;&nbsp;•&nbsp;&nbsp;AI&nbsp;&nbsp;•&nbsp;&nbsp;Document Intelligence</div>
-      <div class="project-copy">
-        <span class="feature-badge ice">FEATURED PROJECT</span>
-        <h2>Smart Document<br/>Assistant</h2>
-        <h3 data-i18n="doc_title">Hiểu cấu trúc tài liệu trước khi chạm vào nội dung.</h3>
-        <p data-i18n="doc_desc">Word Add-in phân tích cấu trúc, kiểm tra Document Health, preview thay đổi và áp dụng safe-fix có kiểm soát.</p>
-        <div class="stack-list"><span>Office.js</span><span>React</span><span>TypeScript</span><span>Semantic Rules</span></div>
-        <a class="project-cta magnetic" href="https://github.com/khoaiprovip123/Smart-document-assistant" target="_blank" rel="noopener">GitHub <span>↗</span></a>
-      </div>
-      <div class="doc-world project-visual">
-        <div class="word-cube">W</div>
-        <div class="paper-ribbon ribbon-a"></div><div class="paper-ribbon ribbon-b"></div>
-        <div class="floating-rule r1">Heading</div><div class="floating-rule r2">Table</div><div class="floating-rule r3">Semantic Structure</div><div class="floating-rule r4">Preview</div>
-        <div class="word-app">
-          <div class="word-ribbon"><b>Smart Document Assistant</b><span>Analyze</span><span>Check</span><span>Suggest</span><span>Fix</span><span>Preview</span><span>Export</span></div>
-          <div class="word-canvas"><div class="doc-paper"><i></i><i></i><i class="short"></i><i></i><i></i><i class="short"></i></div><div class="health-panel"><b>Document Health</b><ul><li>Structure</li><li>Headings</li><li>Tables</li><li>Style Consistency</li></ul><div class="health-ring"><strong>READY</strong></div><button>Review &amp; Apply</button></div></div>
-        </div>
-      </div>
-      <div class="project-foot-cards steps">
-        <article><b>01 · Analyze</b><span data-i18n="doc_s1">Hiểu cấu trúc &amp; ngữ cảnh</span></article>
-        <article><b>02 · Check</b><span data-i18n="doc_s2">Đo Document Health</span></article>
-        <article><b>03 · Preview</b><span data-i18n="doc_s3">Xem trước thay đổi</span></article>
-        <article><b>04 · Safe Fix</b><span data-i18n="doc_s4">Áp dụng có kiểm soát</span></article>
-      </div>
-    </section>
-
-    <!-- AI MEETING -->
-    <section class="scene project-scene meeting-scene" data-scene="meeting">
-      <div class="scene-light meeting-light"></div>
-      <div class="scene-index"><span>04</span><b>04</b><i></i></div>
-      <div class="scene-meta">AI&nbsp;&nbsp;•&nbsp;&nbsp;Audio&nbsp;&nbsp;•&nbsp;&nbsp;Workflow</div>
-      <div class="project-copy">
-        <span class="feature-badge violet">AI PRODUCT</span>
-        <h2>AI Meeting<br/>Assistant</h2>
-        <h3 data-i18n="meeting_title">Từ cuộc trò chuyện đến quyết định có thể hành động.</h3>
-        <p data-i18n="meeting_desc">Gỡ băng có speaker/timestamp, phân tích biên bản theo cấu trúc, theo dõi quyết định và action items, tích hợp hệ sinh thái Google.</p>
-        <div class="stack-list"><span>React</span><span>Gemini</span><span>Firebase</span><span>Motion</span></div>
-        <a class="project-cta magnetic" href="https://github.com/khoaiprovip123/AIMeeting" target="_blank" rel="noopener">GitHub <span>↗</span></a>
-      </div>
-      <div class="meeting-world project-visual">
-        <div class="aurora"></div>
-        <div class="waveform" aria-hidden="true"></div>
-        <div class="meeting-grid">
-          <div class="audio-card"><span class="rec-dot"></span><b>00:18:42</b><small data-i18n="meeting_recording">Đang phân tích cuộc họp</small><div class="mini-wave"></div></div>
-          <div class="transcript-card"><b>Transcript</b><p><span>00:12</span> Speaker 1 — <em data-i18n="sample_transcript">Chốt hướng triển khai theo phương án mới.</em></p><p><span>00:18</span> Speaker 2 — <em data-i18n="sample_transcript2">Tôi sẽ cập nhật action items sau cuộc họp.</em></p></div>
-          <div class="decision-card"><small>KEY DECISION</small><b data-i18n="decision_text">Pilot trước, sau đó mở rộng.</b></div>
-          <div class="action-card"><small>ACTION ITEM</small><b data-i18n="action_text">Chuẩn hóa tài liệu bàn giao</b><span>Owner · Deadline · Priority</span></div>
-        </div>
-      </div>
-      <div class="project-foot-cards steps">
-        <article><b>01 · Audio</b><span data-i18n="meet_s1">Gỡ băng &amp; timestamp</span></article>
-        <article><b>02 · Context</b><span data-i18n="meet_s2">Hiểu bối cảnh</span></article>
-        <article><b>03 · Decisions</b><span data-i18n="meet_s3">Rút quyết định</span></article>
-        <article><b>04 · Action</b><span data-i18n="meet_s4">Chuyển thành công việc</span></article>
-      </div>
-    </section>
-
-    <!-- PROJECT INDEX -->
-    <section class="project-index section-shell" id="projectIndex">
-      <div class="section-kicker"><span>02</span><span>THE LAB</span></div>
-      <div class="index-grid">
-        <div class="index-copy"><h2 class="display-title" data-i18n="lab_title">Phần còn lại của phòng thí nghiệm.</h2><p data-i18n="lab_desc">Các công cụ, thử nghiệm và sản phẩm khác — nơi những ý tưởng nhỏ được kiểm chứng bằng code.</p></div>
-        <div class="repo-list" id="repoList">
-          <a href="https://github.com/khoaiprovip123/markitdown-studio" target="_blank"><span>01</span><b>markitdown-studio</b><em>Document / OCR / AI-ready</em><i>↗</i></a>
-          <a href="https://github.com/khoaiprovip123/ME-BE" target="_blank"><span>02</span><b>ME-BE</b><em>Software Project</em><i>↗</i></a>
-          <a href="https://github.com/khoaiprovip123/ToolPC_ADB" target="_blank"><span>03</span><b>ToolPC_ADB</b><em>Android Utility</em><i>↗</i></a>
-          <a href="https://github.com/khoaiprovip123/KTMods" target="_blank"><span>04</span><b>KTMods</b><em>Android / Mods</em><i>↗</i></a>
-          <a href="https://github.com/khoaiprovip123/InfoPCTools" target="_blank"><span>05</span><b>InfoPCTools</b><em>System / Diagnostics</em><i>↗</i></a>
-          <a href="https://github.com/khoaiprovip123/R-D-Check-List" target="_blank"><span>06</span><b>R-D-Check-List</b><em>Workflow / Checklist</em><i>↗</i></a>
-          <a href="https://github.com/khoaiprovip123/KTTechShop" target="_blank"><span>07</span><b>KTTechShop</b><em>Web / Experiment</em><i>↗</i></a>
-          <a href="https://github.com/khoaiprovip123/ToolsHealthCheck" target="_blank"><span>08</span><b>ToolsHealthCheck</b><em>Health / Utility</em><i>↗</i></a>
-        </div>
-      </div>
-    </section>
-
-    <!-- ABOUT -->
-    <section id="about" class="about-section section-shell">
-      <div class="about-orb" aria-hidden="true"></div>
-      <div class="section-kicker"><span>03</span><span>ABOUT</span></div>
-      <div class="about-grid">
-        <h2 class="display-title"><span data-i18n="about_line1">Ít “AI ở mọi nơi”.</span><br/><em data-i18n="about_line2">Nhiều sản phẩm đáng để sử dụng hơn.</em></h2>
-        <div class="about-copy">
-          <p data-i18n="about_p1">Tôi thích biến những công việc lặp lại, khó kiểm soát hoặc dễ sai thành phần mềm có trải nghiệm rõ ràng, an toàn và thực dụng.</p>
-          <p data-i18n="about_p2">Các dự án trải dài từ Android Native, desktop tooling, Office Add-in đến ứng dụng AI — nhưng cùng một nguyên tắc: giải quyết vấn đề thật trước, công nghệ đến sau.</p>
-          <div class="about-tags"><span>AI Products</span><span>Automation</span><span>Android</span><span>Desktop</span><span>Document Intelligence</span><span>Product Engineering</span></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact" class="contact-section section-shell">
-      <div class="contact-glow"></div>
-      <p class="eyebrow">KEEP BUILDING</p>
-      <h2 class="display-title" data-i18n="contact_title">Có một ý tưởng thú vị?</h2>
-      <p data-i18n="contact_desc">Xem source, theo dõi dự án đang phát triển hoặc bắt đầu một cuộc trò chuyện từ GitHub.</p>
-      <div class="contact-links">
-        <a href="mailto:khoaiprovip123@gmail.com">Email</a>
-        <a href="https://github.com/khoaiprovip123" target="_blank" rel="noopener">GitHub</a>
-        <a href="https://github.com/khoaiprovip123?tab=repositories" target="_blank" rel="noopener">Repositories</a>
-      </div>
-      <a class="big-contact magnetic" href="https://github.com/khoaiprovip123" target="_blank" rel="noopener"><span>@khoaiprovip123</span><i>↗</i></a>
-      <footer><span>© <span id="year"></span> Van Khoai</span><span data-i18n="footer_note">Built as a living portfolio.</span></footer>
-    </section>
-  </main>
-
-  <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-  <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
-  <script defer src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/bundled/lenis.min.js"></script>
-  <script defer src="script.js"></script>
+<section class="repo-section" id="repos" aria-labelledby="repoTitle">
+  <div class="section-meta reveal"><span>KHO MÃ NGUỒN</span><span>ĐANG PHÁT TRIỂN / MÃ NGUỒN MỞ</span></div>
+  <div class="repo-lead reveal"><span class="repo-number">04 / 05</span><div><h2 id="repoTitle">Làm thử.<br/><em>Rồi làm tốt hơn.</em></h2><p>Những dự án nhỏ, công cụ nội bộ và các thử nghiệm được công khai để học hỏi, cải tiến và chia sẻ.</p></div></div>
+  <div class="repo-rows">
+    <a href="https://github.com/khoaiprovip123/markitdown-studio" target="_blank" rel="noopener noreferrer" class="repo-row reveal"><span class="repo-index">01</span><strong>markitdown-studio</strong><span>Chuyển đổi tài liệu / công cụ</span><i aria-hidden="true">↗</i></a>
+    <a href="https://github.com/khoaiprovip123/R-D-Check-List" target="_blank" rel="noopener noreferrer" class="repo-row reveal"><span class="repo-index">02</span><strong>R-D-Check-List</strong><span>Quy trình / theo dõi công việc</span><i aria-hidden="true">↗</i></a>
+    <a href="https://github.com/khoaiprovip123/InfoPCTools" target="_blank" rel="noopener noreferrer" class="repo-row reveal"><span class="repo-index">03</span><strong>InfoPCTools</strong><span>Tiện ích hệ thống</span><i aria-hidden="true">↗</i></a>
+    <a href="https://github.com/khoaiprovip123/ToolPC_ADB" target="_blank" rel="noopener noreferrer" class="repo-row reveal"><span class="repo-index">04</span><strong>ToolPC_ADB</strong><span>Công cụ Android / ADB</span><i aria-hidden="true">↗</i></a>
+    <a href="https://github.com/khoaiprovip123/ME-BE" target="_blank" rel="noopener noreferrer" class="repo-row reveal"><span class="repo-index">05</span><strong>ME-BE</strong><span>Dự án phần mềm</span><i aria-hidden="true">↗</i></a>
+    <a href="https://github.com/khoaiprovip123/KTMods" target="_blank" rel="noopener noreferrer" class="repo-row reveal"><span class="repo-index">06</span><strong>KTMods</strong><span>Thử nghiệm / Android</span><i aria-hidden="true">↗</i></a>
+  </div>
+  <a class="repo-all" href="https://github.com/khoaiprovip123?tab=repositories" target="_blank" rel="noopener noreferrer">XEM TẤT CẢ REPOSITORY <span aria-hidden="true">↗</span></a>
+</section>
+<section class="approach-section" id="approach"><div class="section-meta reveal"><span>CÁCH TÔI LÀM VIỆC</span><span>TỪ BÀI TOÁN ĐẾN GIẢI PHÁP</span></div><div class="approach-layout"><div class="approach-big reveal"><span class="approach-asterisk">✺</span><h2>Hiểu thật sâu.<br/><em>Làm thật gọn.</em></h2></div><div class="approach-detail reveal"><p>Tôi bắt đầu từ <strong>vấn đề và quy trình</strong>, rồi mới chọn công nghệ, kiến trúc và giao diện phù hợp.</p><p>Một sản phẩm tốt phải vận hành được, dễ cải tiến và đủ rõ để người khác tiếp tục phát triển.</p><div class="approach-pills"><span>KIẾN TRÚC PHẦN MỀM</span><span>HỆ THỐNG AI</span><span>THIẾT KẾ SẢN PHẨM</span><span>TỰ ĐỘNG HÓA</span></div></div></div></section>
+<section class="contact-section" id="contact"><div class="contact-top reveal"><span>KẾT NỐI / HỢP TÁC</span><span>VĂN KHOAI / 2026</span></div><div class="contact-main reveal"><p>TỪ Ý TƯỞNG ĐẾN SẢN PHẨM</p><h2>Cùng làm<br/><em>điều có ích.</em></h2><div class="contact-summary"><p>Tôi luôn quan tâm đến các bài toán cần tư duy hệ thống, thiết kế tốt và công nghệ phù hợp.</p><p>Mỗi cuộc trao đổi có thể là khởi đầu cho một sản phẩm đáng để xây dựng.</p></div><div class="contact-actions"><a class="contact-mail" href="mailto:khoaiprovip123@gmail.com">GỬI EMAIL <span aria-hidden="true">↗</span></a><a aria-label="Mở GitHub của Văn Khoai" class="contact-github" href="https://github.com/khoaiprovip123" rel="noopener noreferrer" target="_blank">GHÉ GITHUB <span aria-hidden="true">↗</span></a></div></div><footer class="footer"><span>© <span id="year">2026</span> VĂN KHOAI</span><span>PHẦN MỀM · AI · TRẢI NGHIỆM</span><a href="#beginning">VỀ ĐẦU TRANG ↑</a></footer></section>
+</main>
+<div aria-labelledby="lightboxTitle" aria-modal="true" class="lightbox" hidden="" id="lightbox" role="dialog"><div class="lightbox-backdrop" data-close="true"></div><div class="lightbox-panel"><div class="lightbox-header"><span id="lightboxTitle">ẢNH GIAO DIỆN</span><button aria-label="Đóng ảnh phóng to" id="lightboxClose" type="button">ĐÓNG ×</button></div><img alt="Ảnh chụp giao diện ứng dụng được phóng to" id="lightboxImage" src=""/></div></div>
+<script defer="" src="js/main.js"></script>
 </body>
 </html>
